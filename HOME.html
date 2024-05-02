@@ -1,0 +1,213 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	  <meta charset="UTF-8">
+	  <meta name="viewport" content="width-device-width, initial-scale=1.0">
+	  <link rel="icon" type="image/x-icon" href="PICTURES/LOGO.JPG">
+
+<title> Rose</title>
+<link rel="stylesheet" href="./style.css"/>
+
+</head>
+<style>
+	body {font-family: Times New Roman;
+}
+	nav{
+			background: black;
+			width: 100%;
+			height: 100px;
+			position: absolute;
+			border-bottom: 1px solid darkred;
+		}
+		nav ul{
+			float: center;
+			display: flex;
+			list-style:none;
+
+		}
+		nav ul, li, a{
+			color: white;
+			line-height: 60px;
+			padding: 12px 30px;
+			font-size: 14px;
+			text-decoration: none;
+			border-radius: 6px;
+			margin-inline: 5px;
+		}
+		nav ul li a:hover{
+			background-color: red;
+		}
+		#background-image{
+				background-size: cover;
+				background-position: center;
+				background-repeat: no-repeat;
+				height: 100vh;
+				width:100%;
+				color:white;
+				display: flex;
+				text-align: center;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				filter: brightness(50%);}	
+			#background-image {
+			   position: relative;
+			}
+
+			#background-text {
+			   position: absolute;
+			   top: 50%;
+			   left: 50%;
+			   transform: translate(-50%, -50%);
+			   color: white;
+			   font-size: 300%;
+			   text-align: center;
+			}
+			#background-text a {
+			   position: absolute;
+			   top: 150%;
+			   left: 50%;
+			   transform: translate(-50%, -50%);
+			   color: white;
+			   font-size: 30px;
+			   text-align: center;
+			   padding: 20px;
+			   border: 2px solid white;
+			   border-radius: 10px;
+			   color: white;
+			   text-decoration: none;
+			   transition: color 0.3s ease;
+			}
+			#background-text a:hover {
+			   color: #EFC3A4;
+			}
+		footer {
+		background-color: grey;
+		color: white;
+		text-align: center;
+		padding: 15px;
+		front-family: calibri;
+		bottom: 0;}
+		#logo {
+				max-width: 100px;
+				border-radius: 10%;
+				position: absolute;
+				top: 0px;
+				right: 100px;}
+
+				/*Side Menu Bar - Javascript*/		
+		   .sidenav {
+height: 100%;
+				width: 0;
+				position: fixed;
+				z-index: 1;
+				top: 0;
+				left: 0;
+				background-color: #111;
+				overflow-x: hidden;
+				transition: 1.5s;
+				padding-top: 60px;}
+			.sidenav a {
+				padding: 8px 8px 8px 32px;
+				text-decoration: none;
+				font-size: 80%;
+				color: #818181;
+				display: block;
+				transition: .3s;}
+			.sidenav a:hover {
+				color: saddlebrown;}
+			.sidenav .closebtn {
+				position: absolute;
+				top: 0;
+				right: 25px;
+				font-size: 36px;
+				margin-left: 50px;}
+			@media screen and (max-height: 450px) {
+				.sidenav {padding-top: 15px;}
+				.sidenav a {font-size: 16px;}}
+			/*Menu Bar Button - Javascript*/	
+			.open-menu-btn{
+				color: saddlebrown;
+				font-size: 100%;
+				cursor: pointer;
+				position: absolute;
+				top: 15px;
+				left: 15px;}
+	</style>
+	<script>       
+				function openNav() {
+				  document.getElementById("mySidenav").style.width = "250px";
+				}
+
+				function closeNav() {
+				  document.getElementById("mySidenav").style.width = "0";
+				}
+					 document.addEventListener('DOMContentLoaded', function() {
+				var scrollToTopBtn = document.getElementById('scrollToTopBtn');
+
+				window.addEventListener('scroll', function() {
+				  if (window.scrollY > 300) {
+					scrollToTopBtn.style.display = 'block';
+				  } else {
+					scrollToTopBtn.style.display = 'none';
+				  }
+				});
+
+				scrollToTopBtn.addEventListener('click', function() {
+				  window.scrollTo({
+					top: 0,
+					behavior: 'smooth'
+				  });
+				});
+			  });
+			</script>
+</head>
+<body>
+
+	<header>
+	<nav>
+		<ul id="nav">
+			<li><a href="home.html">HOME</a></li>
+			<li><a href="about.html">ABOUT</a></li>
+			<li><a href="menu.html">MENU</a></li>
+			<li><a href="contactus.html">CONTACT US</a></li>
+			<img src="PICTURES/LOGO.JPG" alt="Ana" id="logo"></div>
+
+			<a href="virtualcashier.html">
+			<button style="font-size: 15px; background-color: yellow; border-radius: 4px "> SHOP NOW</button>
+		</a>
+		
+		</ul>
+	</nav>
+
+	</header>
+	<!-- Responsive Side Menu -->
+		<div class="open-menu-btn" onclick="openNav()">&#9776; </div>
+		<div id="mySidenav" class="sidenav">
+			<a href="javascript:void(0)" class="closebtn"  onclick="closeNav()">&times;</a>
+			<a href="home.html">HOME</a>
+			<a href="#about.html">ABOUT</a>
+			<a href="#Menu.html">MENU</a>
+			<a href="Contact us.html">CONTACT</a>
+			<a href="#Sign-in">SIGN-IN</a>
+		</div>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<img src="PICTURES/Ana.jpg" id="background-image"/>
+<div id="background-text">
+ <marquee> <h2>50 PERCENT OFF!!! <br>50 PERCENT OFF!!!</h2></marquee>
+  <a href="contacts.html"> </p>Flowers with style, Shop with us<p>
+  </div>
+
+
+<footer>
+<p>Developed by Rose Jane Via</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Cashier</title>
+
+</head>
+<body>
+    <h1>Virtual Cashier</h1>
+    <div class="item">
+        <label for="item1">Item 1:</label>
+        <input type="number" id="item1" value="0" min="0" step="1" onchange="calculateTotal()">
+        <span class="price">$75.00 each</span>
+    </div>
+    <div class="item">
+        <label for="item2">Item 2:</label>
+        <input type="number" id="item2" value="0" min="0" step="1" onchange="calculateTotal()">
+        <span class="price">$150.00 each</span>
+    </div>
+    <div class="item">
+        <label for="item4">Item 4:</label>
+        <input type="number" id="item4" value="0" min="0" step="1" onchange="calculateTotal()">
+        <span class="price">$50.00 each</span>
+    </div>
+    <div class="item">
+        <label for="subtotal">Subtotal:</label>
+        <span id="subtotal">$0.00</span>
+    </div>
+    <div class="item" id="payment-info">
+        <label for="payment-methods">Select Payment Method:</label>
+        <select id="payment-methods">
+            <option value="credit-card">Credit Card</option>
+            <option value="paypal">PayPal</option>
+            <option value="cash">Cash on Delivery</option>
+        </select>
+        <button onclick="processPayment()">Proceed to Payment</button>
+    </div>
+
+    <script>
+        function calculateTotal() {
+            var item1 = parseInt(document.getElementById('item1').value) * 10;
+            var item2 = parseInt(document.getElementById('item2').value) * 15;
+            var item3 = parseInt(document.getElementById('item3').value) * 20;
+            var item4 = parseInt(document.getElementById('item4').value) * 25;
+
+            var subtotal = item1 + item2 + item3 + item4;
+            document.getElementById('subtotal').textContent = '$' + subtotal.toFixed(2);
+
+            document.getElementById('payment-info').style.display = 'block';
+        }
+
+        function processPayment() {
+            var paymentMethod = document.getElementById('payment-methods').value;
+            var subtotal = parseFloat(document.getElementById('subtotal').textContent.replace('$', ''));
+
+            alert('Payment processed successfully!\nTotal amount: $' + subtotal.toFixed(2) + '\nPayment Method: ' + paymentMethod);
+        }
+    </script>
+</body>
+</html>
+Sent 53m ago
+Write to Rose Jane Viaña
+
+

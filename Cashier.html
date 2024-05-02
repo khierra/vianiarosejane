@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Cashier</title>
+
+
+ <!--    <style>
+        body {
+            background-color:seashell;
+
+            font-family: Arial, sans-serif;
+        }
+        .item {
+            margin-bottom: 10px;
+        }
+        .item label {
+            display: inline-block;
+            width: 120px;
+        }
+        #total {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        #payment-info {
+            display: none;
+        }
+        #payment-methods label {
+            display: block;
+            margin-bottom: 5px;
+        }
+    </style> -->
+</head>
+<body>
+    <h1>Virtual Cashier</h1>
+    <div class="item">
+        <label for="item1">Item 1:</label>
+        <input type="number" id="item1" value="0" min="0" step="1" onchange="calculateTotal()">
+        <span class="price">$100 each</span>
+    </div>
+    <div class="item">
+        <label for="item2">Item 2:</label>
+        <input type="number" id="item2" value="0" min="0" step="1" onchange="calculateTotal()">
+        <span class="price">$100 each</span>
+    </div>
+    <div class="item">
+        <label for="item3">Item 3:</label>
+        <input type="number" id="item3" value="0" min="0" step="1" onchange="calculateTotal()">
+        <span class="price">$70 each</span>
+    </div>
+    <div class="item">
+        <label for="item4">Item 4:</label>
+        <input type="number" id="item4" value="0" min="0" step="1" onchange="calculateTotal()">
+        <span class="price">$75 each</span>
+    </div>
+    <div class="item">
+        <label for="item5">Item 5:</label>
+        <input type="number" id="item5" value="0" min="0" step="1" onchange="calculateTotal()">
+        <span class="price">$200 each</span>
+    </div>
+    <div class="item">
+        <label for="item6">Item 6:</label>
+        <input type="number" id="item6" value="0" min="0" step="1" onchanges="calculateTotal()">
+        <span class="price">$60 each</span>
+    </div>
+    <div class="item">
+        <label for="subtotal">Subtotal:</label>
+        <span id="subtotal">$0.00</span>
+    </div>
+    <div class="item" id="payment-info">
+        <label for="payment-methods">Select Payment Method:</label>
+        <select id="payment-methods">
+            <option value="credit-card">Credit Card</option>
+            <option value="paypal">PayPal</option>
+            <option value="cash">Cash on Delivery</option>
+        </select>
+        <button onclick="processPayment()">Proceed to Payment</button>
+    </div>
+
+    <script>
+        function calculateTotal() {
+            var item1 = parseInt(document.getElementById('item1').value) * 100,000;
+            var item2 = parseInt(document.getElementById('item2').value) * 200,000;
+            var item3 = parseInt(document.getElementById('item3').value) * 300,000;
+            var item4 = parseInt(document.getElementById('item4').value) * 400,000;
+            var item5 = parseInt(document.getElementById('item5').value) * 500,000;
+            var item6 = parseInt(document.getElementById('item6').value) * 600,000;
+
+            var subtotal = item1 + item2 + item3 + item4 + item5 + item6; 
+            document.getElementById('subtotal').textContent = '$' + subtotal.toFixed(2);
+
+            document.getElementById('payment-info').style.display = 'block';
+        }
+
+        function processPayment() {
+            var paymentMethod = document.getElementById('payment-methods').value;
+            var subtotal = parseFloat(document.getElementById('subtotal').textContent.replace('$', ''));
+
+            alert('Payment processed successfully!\nTotal amount: $' + subtotal.toFixed(2) + '\nPayment Method: ' + paymentMethod);
+        }
+    </script>
+</body>
+</html>

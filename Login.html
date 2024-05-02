@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--HERE IS THE STARTING POINT THE LOG IN TO CONNECT IN HOMEPAGE-->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login Page</title>
+<link rel="stylesheet" type="text/css" href="DESIGNS/LogIn.css">
+<!-- for username and password codes-->
+<script>
+
+    function validateLogin() {
+      var username = document.getElementById("username").value;
+      var password = document.getElementById("password").value;
+
+      // Add your authentication logic here
+      if (username === "sang"&& password === "zhie") {
+        window.location.href = "Gaming.html";
+      } else {
+        alert("Invalid username or password. Please try again.");
+      }
+    }
+</script>
+</head>
+<body>
+
+<form onsubmit="event.preventDefault(); validateLogin()">
+<label for="username">Username:</label>
+<input type="text" id="username" name="username" required><br>
+
+<label for="password">Password:</label>
+<input type="password" id="password" name="password" required><br>
+
+
+<input type="submit" value="Login">
+</form>
+
+
+
+</body>
+</html>
